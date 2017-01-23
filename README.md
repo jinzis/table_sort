@@ -5,7 +5,7 @@
 2、创建一个TableSort的实例，并传相应的数据
 
 ```javascript
-    ar tableSort = new TableSort(
+    var tableSort = new TableSort(
                         //最外层盒子的id
                         "box",
                         //通过ajax获取的数据
