@@ -1,0 +1,42 @@
+@charset "utf-8";
+html,body,table,td,th {
+    margin: 0;
+    padding: 0;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    font-size: 14px;
+    -webkit-user-select: none;
+}
+table{
+    border:1px solid lightblue;
+    border-collapse: collapse;
+}
+table thead {
+    background: lightblue;
+    color: #fff;
+}
+
+table thead tr {
+    height: 35px;
+}
+
+table thead tr th {
+    width: 100px;
+    text-align: center;
+}
+
+table thead tr th.cursor {
+    cursor: pointer;
+}
+
+table tbody tr {
+    height: 30px;
+}
+
+table tbody tr.bg {
+    background: lightgray;
+}
+
+table tbody tr td {
+    width: 100px;
+    text-align: center;
+}

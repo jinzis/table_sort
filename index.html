@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table-sort</title>
+    <link type="text/css" rel="stylesheet" href="css/table-sort.css"/>
+    <style>
+        #box,.title{
+            width:500px;
+            margin: 20px auto;
+        }
+        .title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="title">2016年期末考试9年级成绩表<p>
+    <div id="box">
+    </div>
+    <script type="text/javascript" charset="utf-8" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src=js/table-sort.js></script>
+    <script type="text/javascript" charset="utf-8">
+        var message = null;
+        $.ajax('./data.txt',{
+            type: 'get',
+            success: function(data) {
+                message = data;
+                var tableSort = new TableSort("box",
+                        message,
+                        ["name", "class", "score", "ranking"],
+                        {"姓名": 0, "班级": 1, "总分数": 0, "排名": 0}
+                );
+                tableSort.bind();
+                tableSort.changeBg();
+                tableSort.clickSort();
+            }
+        })
+
+    </script>
+</body>
+</html>
